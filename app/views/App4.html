@@ -1,0 +1,27 @@
+<div ng-controller="app4Controller">
+<div id="content">
+    <h2>Contacts</h2>
+    <input type="text" placeholder="Filtrer..." ng-model="inputFilter" ng-change="filterContacts()">
+    <table>
+        <tr ng-repeat="contact in filtered" contact-elem ng-show="!contact.deleted"></tr>
+    </table>
+    <button class="addButton" ng-click="toAdd()">Ajouter...</button>
+    <button class="addButton undoButton" ng-click="undoDelete()" ng-show="enableUndo() > 0">
+        <ng-pluralize count="nbDeleted"
+                      when="{'1': 'Annuler la suppression.',
+	                   'other': 'Annuler les suppressions ({})'}">
+        </ng-pluralize>
+    </button>
+
+    <h3 ng-show="operation == 'add'">Ajouter un contact</h3>
+    <h3 ng-show="operation == 'update'">Modifier un contact</h3>
+    <div class="form" frm-contact ng-show="operation =='add' || operation == 'update'"></div><br/>
+    <span id="countContact">
+        <ng-pluralize count="nbContacts"
+                      when="{	'0': 'Aucun contact trouvé.',
+	        		    '1': '1 contact trouvé.',
+	                	'other': '{} contacts trouvés.'}">
+		</ng-pluralize></span>
+
+</div>
+</div>

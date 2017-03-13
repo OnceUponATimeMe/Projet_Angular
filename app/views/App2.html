@@ -1,0 +1,40 @@
+<div data-ng-controller="app2Controller as ctrlService">
+    <form data-ng-app="app2Controller" id="services" class="ng-valid ng-scope ng-dirty ng-valid-parse" style="">
+        <h1>Services</h1>
+        <div class="alert alert-info">
+            <span>Choisissez les éléments à inclure</span><br/>
+                <b><ng-pluralize count="ctrlService.total()"
+                         when="{'0': 'Aucun service sélectionné',
+                       'one': '1 service séléctionné.',
+                       'other': '{} services sélectionnés.'}">
+                </ng-pluralize></b><br>
+        </div>
+        <ul>
+            <li class="ng-binding" ng-repeat="service in ctrlService.services" ng-click="ctrlService.toggleActive(service)" ng-class="{active:service.active}">
+                <span id = "pull-left">
+                    {{service.name}}
+                </span>
+                <span class ="pull-right">
+                    {{service.price}} $
+                </span>
+            </li>
+        </ul>
+        <div class="total">
+            Total:
+            <span class="ng-binding pull-right" data-ng-bind="ctrlService.prix()"></span>
+        </div>
+
+        <div>
+            <div class = "input-group">
+                <span class="input-group-addon">
+                    <input class="ng-valid ng-dirty ng-valid-parse ng-touched" aria-label="..." ng-model="ckPromo"
+                           type="checkbox"/>
+                </span>
+                <input class="form-control ng-pristine ng-untouched ng-valid" aria-label=". . ."
+                           ng-model="codePromo" placeholder="Code Promo" type="text"/>
+            </div>
+        </div>
+    </form>
+</div>
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+  <html lang="fr" ng-app="MyApplication">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="views/css/App2.css">
+    <link rel="stylesheet" href="views/css/App3.css">
+    <link rel="stylesheet" href="views/css/App4.css">
+    <link rel="stylesheet" href="views/css/App5.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.js"></script>
+    <script src="app.js"></script>
+
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="">AngularJS</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#/"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="#App1"><i class="fa fa-home"></i>Exercice 1</a></li>
+            <li><a href="#App2"><i class="fa fa-home"></i>Exercice 2</a></li>
+            <li><a href="#App3"><i class="fa fa-home"></i>Exercice 3</a></li>
+            <li><a href="#App4"><i class="fa fa-home"></i>Exercice 4</a></li>
+            <li><a href="#App5"><i class="fa fa-home"></i>Exercice 5</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+        <div ng-view></div>
+    </div>
+
+
+
+  </body>
+  </html>

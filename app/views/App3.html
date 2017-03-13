@@ -1,0 +1,33 @@
+<div data-ng-controller="app3Controller as ctrlListes" id="main-panel" class="panel panel-primary">
+    <div class="panel-body">
+        <h3>Sélectionnez vos produits</h3>
+        <h5><b>Produits disponibles :</b></h5>
+        <div id = "produitsDispos">
+            <select ng-options="item as item.title for item in ctrlListes.dispoItems track by item.title" size="{{ctrlListes.dispoItems.length}}" ng-model="selected" multiple ="true"></select>
+        </div>
+        <div id="bouttons">
+            <button data-ng-click="ctrlListes.addToIncluded()" type="button" class="btn btn-success">
+                <span class="glyphicon glyphicon-step-forward"></span>
+            </button><br/>
+            <button type="button" class="btn btn-success" data-ng-click="ctrlListes.addAllToIncluded()">
+                <span class="glyphicon glyphicon-fast-forward"></span>
+            </button><br/>
+            <button data-ng-click="" type="button" class="btn btn-success">
+                <span class="glyphicon glyphicon-step-backward"></span>
+            </button><br/>
+            <button data-ng-click="ctrlListes.RemoveAllFromIncluded()" type="button" class="btn btn-success">
+                <span class="glyphicon glyphicon-fast-backward"></span>
+            </button><br/>
+        </div>
+        <div id = "produitsAInclure">
+            <select ng-options="item as item.title for item in ctrlListes.includedItems track by item.title" size="{{ctrlListes.includedItems.length}}" ng-model="selected" multiple ="true"></select>
+        </div>
+        <div id="info">
+            <button data-ng-click="" type="button" class="pull-right btn btn-success">
+                Étape Suivante
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </button>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,35 @@
+<div ng-controller="app5Controller as currency">
+    <div id="content">
+        <h2>Convertisseur de devises</h2>
+        <input type="number" ng-model="what" ng-keyup="result=''"/>
+        <select ng-options="cur as (cur.code + ' - ' + cur.name) for cur in currencies"
+                ng-model="from"></select>
+        <i class="material-icons" ng-click="swap()">compare_arrows</i>
+        <select ng-options="cur as (cur.code + ' - ' + cur.name) for cur in currencies"
+                ng-model="to"></select>
+        <span>{{result}}</span>
+        <button ng-click="getResult()">GO !</button>
+        <i class="material-icons refresh" ng-class="show ? 'show' : 'hide'">refresh</i>
+
+        <input type="checkbox" ng-model="histo" id="ckb" /> Historique
+
+        <div class="histo" ng-show="histo">
+            <table>
+                <thead>
+                <tr>
+                    <th>De</th>
+                    <th>En</th>
+                    <th>Taux</th>
+                    <th>Montant</th>
+                    <th>Date</th>
+                    <th>Delta</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="conversion in historique" conv-histo></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

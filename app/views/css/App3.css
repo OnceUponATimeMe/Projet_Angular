@@ -1,0 +1,47 @@
+#main-panel {
+    background-color: #61A1BC;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px #ccc;
+    width: 80%;
+    padding: 12px 60px;
+    margin: 0px auto;
+}
+
+#produitsDispos select {
+    overflow: visible;
+    width: 45%;
+    height: 200px;
+    margin-left: 0px;
+    background-color: white;
+    float:left;
+    margin-right: 2%;
+}
+
+h3 {
+    color: white;
+}
+
+#produitsAInclure select {
+    overflow: visible;
+    width: 45%;
+    height: 200px;
+    background-color: white;
+
+
+}
+
+#info {
+    background-color: #3279B6;
+    margin-top: 2%;
+}
+
+#bouttons {
+    float:left;
+    margin-right: 2%;
+}
+
+
+button {
+    margin-top: 10px;
+}
+

@@ -1,0 +1,18 @@
+<div id="main-panel" data-ng-controller="app1Controller as ctrlNote" class="panel panel-primary">
+    <div class="panel-heading">Ex 1 : Note Application</div>
+    <div class="panel-body">
+        <b>Produits disponibles :</b>
+        <textarea data-ng-change="ctrlNote.change()" class="form-control" rows="4"   maxlength="100"  data-ng-model="ctrlNote.message"></textarea>
+        <button data-ng-click="ctrlNote.save()" type="button" class="btn btn-primary">Enregistrer</button>
+        <button data-ng-click="ctrlNote.clear()" type="button" class="btn btn-primary">Effacer</button>
+        <div class="alert alert-info alert-dismissible" role="alert">
+            Nombre de caractère restants :
+            <span class="ng-binding" data-ng-bind="ctrlNote.count()">100</span>
+        </div>
+
+        <div class="alert alert-dismissible alert-info" data-ng-class="{'ng-hide':ctrlNote.status == 1, 'alert-warning': ctrlNote.count()<50 && ctrlNote.info!='Note sauvegardée','alert-danger':ctrlNote.count()<20 && ctrlNote.info!='Note sauvegardée','alert-success':ctrlNote.info=='Note sauvegardée' && status == 0}" role="alert" data-ng-show="ctrlNote.info" style="">
+            {{ctrlNote.info}}
+            <button class="close" type = "button" data-dismiss="alert" aria-label="Close" data-ng-click="ctrlNote.info=''">x</button>
+        </div>
+    </div>
+</div>
